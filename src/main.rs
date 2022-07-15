@@ -9,5 +9,5 @@ fn main() {
     let number: u128 = user_input::get_user_input("Please enter a number for 'x':");
     let numbers: Vec<u128> = math::number_to_vector(number);
 
-    println!("Smallest multiple of 1 - {} is: {}", number, math::calculate_smallest_multiple(numbers));
+    println!("Smallest multiple of all numbers between 1 and {} is: {}", number, math::calculate_smallest_multiple(numbers));
 }
