@@ -9,15 +9,5 @@ fn main() {
     let number: u128 = user_input::get_user_input("Please enter a number for 'x':");
     let numbers: Vec<u128> = math::number_to_vector(number);
 
-    let mut counter: u128 = 1;
-    let mut smallest_multiple: u128 = 0;
-    loop {
-        if math::divisible_by_vector_values(counter, &numbers) {
-            smallest_multiple = counter;
-            break;
-        }
-        counter += 1;
-    }
-
-    println!("Smallest multiple of 1 - {} is: {}", number, smallest_multiple);
+    println!("Smallest multiple of 1 - {} is: {}", number, math::calculate_smallest_multiple(numbers));
 }
